@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane blendMode="DARKEN" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="502.0" prefWidth="557.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button layoutX="33.0" layoutY="181.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="76.0" text="1">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Button>
+      <Button layoutX="127.0" layoutY="181.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="76.0" text="2">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Button>
+      <Button layoutX="222.0" layoutY="181.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="76.0" text="3">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Button>
+      <Separator layoutX="327.0" layoutY="181.0" orientation="VERTICAL" prefHeight="311.0" prefWidth="11.0" />
+      <Button layoutX="33.0" layoutY="251.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="76.0" text="4">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Button>
+      <Button layoutX="127.0" layoutY="254.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="76.0" text="5">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Button>
+      <Button layoutX="222.0" layoutY="254.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="76.0" text="6">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Button>
+      <Button layoutX="33.0" layoutY="322.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="76.0" text="7">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Button>
+      <Button layoutX="127.0" layoutY="322.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="76.0" text="8">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Button>
+      <Button layoutX="222.0" layoutY="322.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="76.0" text="9">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Button>
+      <Button layoutX="344.0" layoutY="204.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="76.0" text="+">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Button>
+      <Button layoutX="435.0" layoutY="204.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="76.0" text="-">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Button>
+      <Button layoutX="344.0" layoutY="268.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="76.0" text="*">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Button>
+      <Button layoutX="435.0" layoutY="268.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="76.0" text="/">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Button>
+      <Button layoutX="344.0" layoutY="328.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="76.0" text="SQR">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="435.0" layoutY="328.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="76.0" text="Inverse">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="222.0" layoutY="400.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="76.0" text="AC">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Button>
+      <Button layoutX="33.0" layoutY="397.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="76.0" text="0">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Button>
+      <Button layoutX="128.0" layoutY="397.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="76.0" text="=">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Button>
+      <Button layoutX="382.0" layoutY="397.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="76.0" text="Simplify">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <TextField fx:id="numerator1" layoutX="42.0" layoutY="26.0" prefHeight="46.0" prefWidth="76.0">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="denominator1" layoutX="42.0" layoutY="101.0" prefHeight="46.0" prefWidth="76.0">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </TextField>
+      <Label fx:id="sign" layoutX="149.0" layoutY="68.0" prefHeight="25.0" prefWidth="33.0" />
+      <TextField fx:id="numerator2" layoutX="216.0" layoutY="26.0" prefHeight="46.0" prefWidth="76.0">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="denominator2" layoutX="216.0" layoutY="101.0" prefHeight="46.0" prefWidth="76.0">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </TextField>
+      <Label layoutX="328.0" layoutY="68.0" prefHeight="25.0" prefWidth="33.0" text="=">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </Label>
+      <Label fx:id="ResNumerator" layoutX="403.0" layoutY="34.0" prefHeight="46.0" prefWidth="76.0">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label fx:id="ResDenominator" layoutX="403.0" layoutY="101.0" prefHeight="46.0" prefWidth="76.0">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Separator layoutX="31.0" layoutY="91.0" prefHeight="4.0" prefWidth="98.0" />
+      <Separator layoutX="205.0" layoutY="91.0" prefHeight="4.0" prefWidth="98.0" />
+      <Separator layoutX="392.0" layoutY="91.0" prefHeight="4.0" prefWidth="98.0" />
+   </children>
+</AnchorPane>
