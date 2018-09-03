@@ -1,10 +1,12 @@
 package Interfaz;
 
+import Generic.RationalNumber;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import modelo.Calculator;
 
 public class Main extends Application{
 
@@ -21,6 +23,13 @@ public class Main extends Application{
 
 	
 	public static void main(String[] args) {
+		
+		Calculator calcu = new Calculator();
+		calcu.multiplyRacional(2, 3, 3, 2);
+		
+		System.out.println(calcu.getNumerator() + " : " + calcu.getDenominator()); 
+		
+		
 		launch(args);
 		
 		
