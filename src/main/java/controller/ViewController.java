@@ -10,36 +10,17 @@ import modelo.Calculator;
 public class ViewController {
 	
 		Calculator calculator = new Calculator();
-	
-		@FXML
-	    private Button nine;
 
+	
+		
 	    @FXML
 	    private Label sign;
-
-	    @FXML
-	    private Button seven;
-
-	    @FXML
-	    private Button two;
-
-	    @FXML
-	    private Button three;
 
 	    @FXML
 	    private Button delete;
 
 	    @FXML
-	    private Button eight;
-
-	    @FXML
-	    private Button zero;
-
-	    @FXML
 	    private Button sqr;
-
-	    @FXML
-	    private Button four;
 
 	    @FXML
 	    private Button divide;
@@ -49,9 +30,6 @@ public class ViewController {
 
 	    @FXML
 	    private Button multiply;
-
-	    @FXML
-	    private Button five;
 
 	    @FXML
 	    private Button substract;
@@ -69,13 +47,7 @@ public class ViewController {
 	    private TextField denominator1;
 
 	    @FXML
-	    private Button six;
-
-	    @FXML
 	    private TextField denominator2;
-
-	    @FXML
-	    private Button one;
 
 	    @FXML
 	    private TextField numerator1;
@@ -89,68 +61,31 @@ public class ViewController {
 	    @FXML
 	    private Button simplify;
 
-	    @FXML
-	    void butOne(ActionEvent event) {
-
-	    }
-
-	    @FXML
-	    void butTwo(ActionEvent event) {
-
-	    }
-
-	    @FXML
-	    void butThree(ActionEvent event) {
-
-	    }
-
-	    @FXML
-	    void butFour(ActionEvent event) {
-
-	    }
-
-	    @FXML
-	    void butFive(ActionEvent event) {
-
-	    }
-
-	    @FXML
-	    void butSix(ActionEvent event) {
-
-	    }
-
-	    @FXML
-	    void butSeven(ActionEvent event) {
-
-	    }
-
-	    @FXML
-	    void butEight(ActionEvent event) {
-
-	    }
-
-	    @FXML
-	    void butNine(ActionEvent event) {
-
-	    }
-
+	    
 	    @FXML
 	    void butAdd(ActionEvent event) {
 	    	
-	    	int num1 = Integer.parseInt(numerator1.getText());
-	    	int den1 = Integer.parseInt(denominator1.getText());
-	    	int num2 = Integer.parseInt(numerator2.getText());
-	    	int den2 = Integer.parseInt(denominator2.getText());
-	    	
-	    	calculator.AddRational(num1, den1, num2, den2);
+	    	if(!(numerator1.getText().equals("")) && !(denominator1.getText().equals("")) && !(numerator2.getText().equals("")) && !(denominator2.getText().equals(""))) {
+	    		
+	    		int num1 = Integer.parseInt(numerator1.getText());
+		    	int den1 = Integer.parseInt(denominator1.getText());
+		    	int num2 = Integer.parseInt(numerator2.getText());
+		    	int den2 = Integer.parseInt(denominator2.getText());
+		    	
+		    	calculator.AddRational(num1, den1, num2, den2);
 
-	    	sign.setText("+");
+		    	sign.setText("+");
+		    	
+	    	}
+	    	
 	    	
 
 	    }
 
 	    @FXML
 	    void butSubstract(ActionEvent event) {
+	    	
+	    	if(!(numerator1.getText().equals("")) && !(denominator1.getText().equals("")) && !(numerator2.getText().equals("")) && !(denominator2.getText().equals(""))) {
 	    	
 	    	int num1 = Integer.parseInt(numerator1.getText());
 	    	int den1 = Integer.parseInt(denominator1.getText());
@@ -160,12 +95,14 @@ public class ViewController {
 	    	calculator.SubstractRational(num1, den1, num2, den2);
 	    	
 	    	sign.setText("-");
-	    	
+	    	}
 
 	    }
 
 	    @FXML
 	    void butMultiply(ActionEvent event) {
+	    	
+	    	if(!(numerator1.getText().equals("")) && !(denominator1.getText().equals("")) && !(numerator2.getText().equals("")) && !(denominator2.getText().equals(""))) {
 	    	
 	    	int num1 = Integer.parseInt(numerator1.getText());
 	    	int den1 = Integer.parseInt(denominator1.getText());
@@ -175,12 +112,13 @@ public class ViewController {
 	    	calculator.multiplyRacional(num1, den1, num2, den2);
 	    	sign.setText("*");
 	    	
-
+	    	}
 	    }
 
 	    @FXML
 	    void butDivide(ActionEvent event) {
 	    	
+	    	if(!(numerator1.getText().equals("")) && !(denominator1.getText().equals("")) && !(numerator2.getText().equals("")) && !(denominator2.getText().equals(""))) {
 	    	int num1 = Integer.parseInt(numerator1.getText());
 	    	int den1 = Integer.parseInt(denominator1.getText());
 	    	int num2 = Integer.parseInt(numerator2.getText());
@@ -189,22 +127,76 @@ public class ViewController {
 	    	calculator.divideRational(num1, den1, num2, den2);
 	    	
 	    	sign.setText("/");
-	    	
+	    	}
 
 	    }
 
 	    @FXML
 	    void butSqr(ActionEvent event) {
+	    	
+	    	if(!(numerator1.getText().equals("")) && !(denominator1.getText().equals(""))) {
+	    		
+	    		int num1 = Integer.parseInt(numerator1.getText());
+		    	int den1 = Integer.parseInt(denominator1.getText());
+	    		
+	    		calculator.squaredRational(num1, den1);
+	    		
+	    		numerator1.setText(String.valueOf(calculator.getNumerator()));
+	    		denominator1.setText(String.valueOf(calculator.getDenominator()));
+	    		
+	    	}
+	    	
+	    	if(!(numerator2.getText().equals("")) && !(denominator2.getText().equals(""))) {
+	    		
+	    		int num2 = Integer.parseInt(numerator2.getText());
+		    	int den2 = Integer.parseInt(denominator2.getText());
+	    		
+	    		calculator.squaredRational(num2, den2);
+	    		
+	    		numerator2.setText(String.valueOf(calculator.getNumerator()));
+	    		denominator2.setText(String.valueOf(calculator.getDenominator()));
+	    	}
 
 	    }
 
 	    @FXML
 	    void butInverse(ActionEvent event) {
+	    	
+	    	if(!(numerator1.getText().equals("")) && !(denominator1.getText().equals(""))) {
+	    		
+	    		int num1 = Integer.parseInt(numerator1.getText());
+		    	int den1 = Integer.parseInt(denominator1.getText());
+	    		
+	    		calculator.RationalInverse(num1, den1);
+	    		
+	    		numerator1.setText(String.valueOf(calculator.getNumerator()));
+	    		denominator1.setText(String.valueOf(calculator.getDenominator()));
+	    		
+	    	}
+	    	
+	    	if(!(numerator2.getText().equals("")) && !(denominator2.getText().equals(""))) {
+	    		
+	    		int num2 = Integer.parseInt(numerator2.getText());
+		    	int den2 = Integer.parseInt(denominator2.getText());
+	    		
+	    		calculator.RationalInverse(num2, den2);
+	    		
+	    		numerator2.setText(String.valueOf(calculator.getNumerator()));
+	    		denominator2.setText(String.valueOf(calculator.getDenominator()));
+	    	}
 
 	    }
 
 	    @FXML
 	    void butDelete(ActionEvent event) {
+	    	
+	    	numerator1.setText("");
+	    	denominator1.setText("");
+	    	numerator2.setText("");
+	    	denominator2.setText("");
+	    	ResNumerator.setText("");
+	    	ResDenominator.setText("");
+	    	
 
 	    }
 
@@ -224,6 +216,29 @@ public class ViewController {
 
 	    @FXML
 	    void butSimplify(ActionEvent event) {
+	    	
+	    	if(!(numerator1.getText().equals("")) && !(denominator1.getText().equals(""))) {
+	    		
+	    		int num1 = Integer.parseInt(numerator1.getText());
+		    	int den1 = Integer.parseInt(denominator1.getText());
+	    		
+	    		calculator.simplifyRational(num1, den1);
+	    		
+	    		numerator1.setText(String.valueOf(calculator.getNumerator()));
+	    		denominator1.setText(String.valueOf(calculator.getDenominator()));
+	    		
+	    	}
+	    	
+	    	if(!(numerator2.getText().equals("")) && !(denominator2.getText().equals(""))) {
+	    		
+	    		int num2 = Integer.parseInt(numerator2.getText());
+		    	int den2 = Integer.parseInt(denominator2.getText());
+	    		
+	    		calculator.RationalInverse(num2, den2);
+	    		
+	    		numerator2.setText(String.valueOf(calculator.getNumerator()));
+	    		denominator2.setText(String.valueOf(calculator.getDenominator()));
+	    	}
 
 	    }
 
