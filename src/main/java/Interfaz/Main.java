@@ -24,11 +24,11 @@ public class Main extends Application{
 	
 	public static void main(String[] args) {
 		
-		Calculator calcu = new Calculator();
-		calcu.multiplyRacional(2, 3, 3, 2);
-		
-		System.out.println(calcu.getNumerator() + " : " + calcu.getDenominator()); 
-		
+//		Calculator calcu = new Calculator();
+//		calcu.multiplyRacional(2, 3, 3, 2);
+//		
+//		System.out.println(calcu.getNumerator() + " : " + calcu.getDenominator()); 
+//		
 		
 		launch(args);
 		
